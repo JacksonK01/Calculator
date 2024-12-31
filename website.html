@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<hmtl>
+    <head>
+        <title>Calculator</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: black;
+                color: black;
+            }
+            .all-buttons{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .circle-button {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-right: 30px;
+                padding-left: 30px;
+                font-weight: bold;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+            .wide-right-circle-button {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-right: 110px;
+                padding-left: 30px;
+                font-weight: bold;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+            .number-button {
+                background-color: #2b2b2b;
+                color: white;
+            }
+            .special-button {
+                background-color: lightgray;
+                color: black;
+            }
+            .operation-button {
+                background-color: orange;
+                color: white;
+            }
+            .num-display {
+                color: white;
+                font-size: 30px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-right: 30px;
+                padding-left: 30px;
+                background-color: #363535;
+                background-size: 30px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+    <p class="num-display" id="display">0</p>
+
+    <div class="all-buttons">
+
+        <div>
+
+            <button class="circle-button special-button" onclick="
+                onClear();
+                ">C</button>
+            <button class="circle-button special-button" onclick="
+                onSwitchSign();
+                ">±</button>
+            <button class="circle-button special-button" onclick="
+                onPercent();
+                ">%</button>
+            <button class="circle-button operation-button" onclick="
+                onDivide();
+                ">÷</button>
+
+        </div>
+
+        <div>
+
+            <button class="circle-button number-button" onclick="
+                onPressedNumber(7);
+                ">7</button>
+            <button class="circle-button number-button" onclick="
+                onPressedNumber(8);
+                ">8</button>
+            <button class="circle-button number-button" onclick="
+                onPressedNumber(9);
+                ">9</button>
+            <button class="circle-button operation-button" onclick="
+                onMultiply();
+                ">x</button>
+
+        </div>
+
+        <div>
+
+            <button class="circle-button number-button" onclick="
+                onPressedNumber(4);
+                ">4</button>
+            <button class="circle-button number-button" onclick="
+                onPressedNumber(5);
+                ">5</button>
+            <button class="circle-button number-button" onclick="
+                onPressedNumber(6);
+                ">6</button>
+            <button class="circle-button operation-button" onclick="
+                onPressedNumber(7);
+                ">-</button>
+
+        </div>
+
+        <div>
+
+            <button class="circle-button number-button" onclick="
+                onPressedNumber(1);
+                ">1</button>
+            <button class="circle-button number-button" onclick="
+                onPressedNumber(2);
+                ">2</button>
+            <button class="circle-button number-button" onclick="
+                onPressedNumber(3);
+                ">3</button>
+            <button class="circle-button operation-button" onclick="
+                onAdd();
+                ">+</button>
+
+        </div>
+
+        <div>
+
+            <button class="wide-right-circle-button number-button" onclick="
+                onPressedNumber(0);
+                ">0</button>
+            <button class="circle-button number-button" onclick="
+                onDecimal();
+                ">.</button>
+            <button class="circle-button operation-button" onclick="
+                onEqual();
+                ">=</button>
+
+        </div>
+
+    </div>
+
+    </body>
+
+    <script src="main.js">
+
+    </script>
+</hmtl>
