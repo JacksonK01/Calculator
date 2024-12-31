@@ -69,7 +69,7 @@ function onDecimal() {
 
 
 function onEqual() {
-    if (hasCachedInteger && lastOperation) {
+    if (hasCachedInteger && lastOperation != null) {
         let n = getDisplayTextAsFloat();
         cachedInteger = lastOperation(n);
         setDisplayText(cachedInteger);
